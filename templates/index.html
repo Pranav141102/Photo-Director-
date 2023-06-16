@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+  <title>Photo Director! - Transform your images online</title>
+  <style>
+    body {
+      background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwallpaperaccess.com%2Fwebsite&psig=AOvVaw1ywkKAWWA_UHp_c5uLho-f&ust=1686843188887000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCICKy--Kw_8CFQAAAAAdAAAAABAE');
+      background-repeat: no-repeat;
+    }
+
+    .upload-btn-wrapper {
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+    }
+
+    .btn {
+      text-transform: uppercase;
+      /* font-size: 1.5em; */
+      color: black;
+      background: #add8e6;
+      display: inline-block;
+      /* padding: 10px 30px; */
+      text-transform: uppercase;
+      /* margin-top: 20px; */
+      text-decoration: none;
+      letter-spacing: .5px;
+      transition: .5s;
+    }
+
+    .btn1 {
+      border: 1px solid gray;
+      color: gray;
+      background-color: white;
+      padding: 8px 20px;
+      display: inline-block;
+      border-radius: 8px;
+      font-size: 20px;
+      transition: .5s;
+      font-weight: Medium;
+    }
+
+    .custom-select option {
+      background-color: black;
+      color: #fff;
+    }
+
+    .custom-select:focus {
+      border-color: #198754;
+      box-shadow: 0 0 0 0.25rem rgb(25 135 84 / 25%);
+    }
+
+    .custom-select:checked .upload-btn-wrapper input[type=file] {
+      font-size: 100px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+    }
+
+    .upload-btn-wrapper input[type=file] {
+      font-size: 100px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+    }
+
+    hr.gradient {
+      height: 3px;
+      border: none;
+      border-radius: 6px;
+      background: linear-gradient(90deg,
+          rgba(13, 8, 96, 1) 0%,
+          rgba(9, 9, 121, 1) 21%,
+          rgba(6, 84, 170, 1) 51%,
+          rgba(0, 255, 113, 1) 100%);
+    }
+
+    option:checked {
+      background: green;
+      color: white;
+    }
+
+    .dropdown-menu {
+      background-color: #89CFF0;
+      color: black;
+    }
+
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">Photo Director!</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/about">About <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Info about the creator
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item">Pranav Deshmukh</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://www.instagram.com/pranxxvv/" target="_blank">Insta Link</a>
+            <a class="dropdown-item" href="https://github.com/Pranav141102" target="_parent ">GitHub Link</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  {% with messages = get_flashed_messages(with_categories=true) %} {% if
+  messages %} {% for category, message in messages %}
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success</strong>{{ message | safe}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  {% endfor %} {% endif %} {% endwith %}
+
+  <div class="container my-4">
+    <h1 class="">Photo Director! - Transfrom your images online</h1>
+    <div id="accordion">
+
+      <div class="card ">
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+            <button class="btn btn-outline-dark" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+              aria-controls="collapseOne">
+              About the site :
+            </button>
+          </h5>
+        </div>
+
+        <div id="collapseOne" class="collapse hidden" aria-labelledby="headingOne" data-parent="#accordion">
+          <div class="card-body">
+            PhotoDirector is fast and free online file convert web application. Here you can convert your photos from png to jpg and many more.... In this you can convert your photos to greayscale images also. You just have to upload the file (photo), select the operation from the dropdown menu and click on th submit button. <br>
+            There you go your file will be available in the bule pop-up present below the nav-bar.
+          </div>
+        </div>
+      </div>
+      <hr class="gradient">
+      <form action=" {{url_for('edit')}} " method="POST" enctype="multipart/form-data">
+
+        <!-- <div class="upload-btn-wrapper input-group ">
+          <input class="btn1 my-3 form-control-file" name="file" type="file" id="formFlie"></input>
+        </div> -->
+        <!-- <div class="upload-btn input-group custom-file-button my-3">
+          <label class="input-group-text" for="inputGroupFile">Your Custom Text</label>
+          <input type="file" name="file" class="form-control" id="inputGroupFile">
+        </div> -->
+        <div class="upload-btn-wrapper ">
+          <button class="btn">Upload a file</button>
+          <input  type="file" name="file" onchange="handleFileSubmit()" id="file_select" />
+        </div>
+        <div class="form-floating" required>
+          <label for="floatingSelect ">Select an Editing Operation :</label>
+          <select class="custom-select mx-3" name="operation" id="floatingSelect" style="width: 200px" required>
+            <option selected>Choose an operation :</option>
+            <option value="cpng">Convert to PNG</option>
+            <option value="cwebp">Convert to Webp</option>
+            <option value="cjpg">Convert to JPG</option>
+            <option value="cgrey">Convert to GreyScale</option>
+          </select>
+        </div>
+        <div class="my-3">
+          <button type="submit" class="btn btn-dark">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script>
+    function handleFileSubmit() {
+      var fileInput = document.getElementById('file_select');
+      fileInput.style.backgroundColor = 'yellow';
+    }
+  </script>
+</body>
+
+</html>
